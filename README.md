@@ -1,8 +1,8 @@
 <h3>Requirement</h3>
-1. PHP
-2. PostgresSQL (or other database)
-3. Composer
-4. Git (Optional)
+1. PHP <br>
+2. PostgresSQL (or other database) <br>
+3. Composer <br>
+4. Git (Optional) <br>
 
 <h3>Installation</h3>
 1. git clone https://github.com/fazriansyah19/Symmetric-Crypto.git || download zip file and extract <br>
