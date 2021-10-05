@@ -1,5 +1,11 @@
+<h3>Requirement</h3>
+1. PHP
+2. PostgresSQL (or other database)
+3. Composer
+4. Git (Optional)
+
 <h3>Installation</h3>
-1. git clone https://github.com/fazriansyah19/Symmetric-Crypto.git <br>
+1. git clone https://github.com/fazriansyah19/Symmetric-Crypto.git || download zip file and extract <br>
 2. cd to "symmetric-crypto-master" folder <br>
 3. composer install <br>
 4. create new file ".env" and copy all content in ".env.example" file and paste in .env <br>
