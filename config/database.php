@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL=parse_url('postgres://xpalknktybvefo:612cba19eb0913a6f08461725c5270418889fbc5cad82622271c10eb639ee903@ec2-52-86-123-180.compute-1.amazonaws.com:5432/d7v9u2aa9icllt');
-
 return [
 
     /*
@@ -67,12 +65,12 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => $DATABASE_UR["postgres://xpalknktybvefo:612cba19eb0913a6f08461725c5270418889fbc5cad82622271c10eb639ee903@ec2-52-86-123-180.compute-1.amazonaws.com:5432/d7v9u2aa9icllt"],
-            'host' => $DATABASE_URL["ec2-52-86-123-180.compute-1.amazonaws.com"],
-            'port' => $DATABASE_URL["5432"],
-            'database' => $DATABASE_URL["d7v9u2aa9icllt"],
-            'username' => $DATABASE_URL["xpalknktybvefo"],
-            'password' => $DATABASE_URL["612cba19eb0913a6f08461725c5270418889fbc5cad82622271c10eb639ee903"],
+            'url' => env('DATABASE_URL', 'postgres://xpalknktybvefo:612cba19eb0913a6f08461725c5270418889fbc5cad82622271c10eb639ee903@ec2-52-86-123-180.compute-1.amazonaws.com:5432/d7v9u2aa9icllt'),
+            'host' => env('DB_HOST', 'ec2-52-86-123-180.compute-1.amazonaws.com'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'd7v9u2aa9icllt'),
+            'username' => env('DB_USERNAME', 'xpalknktybvefo'),
+            'password' => env('DB_PASSWORD', '612cba19eb0913a6f08461725c5270418889fbc5cad82622271c10eb639ee903'),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
