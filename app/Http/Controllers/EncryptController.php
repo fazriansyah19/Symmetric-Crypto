@@ -26,12 +26,11 @@ class EncryptController extends Controller
 
         $attr['encrypted'] = $encrypter->encrypt(request('original'));
         Encrypt::create($attr);
-        session()->flash('success', 'teks enkripsi berhasil dibuat.');
-        return redirect()->route('encrypt.index');
+        return redirect()->route('encrypt.index')->with('encrypt', 'The message was encrypted');
     }
 
     public function destroy(Encrypt $encrypt) {
         $encrypt->delete();
-        return redirect()->route('encrypt.index');
+        return redirect()->route('encrypt.index')->with('encrypt', 'The message was deleted');
     }
 }

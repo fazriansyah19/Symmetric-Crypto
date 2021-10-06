@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Symmetric Crypto Encryption</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -44,8 +44,11 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/fazriansyah19/Symmetric-Crypto">Source</a>
+                        </li>
                         @guest
-                            @if (Route::has('login'))
+                            {{-- @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
@@ -55,7 +58,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif
+                            @endif --}}
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -81,8 +84,22 @@
         </nav>
 
         <main class="py-4">
+            <div class="w-100">
+                <div class="row justify-content-md-center">
+                    @include('alert')
+                </div>
+            </div>
             @yield('content')
         </main>
     </div>
+    <footer class="fixed-bottom text-center">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-12">
+                    <strong>&copy; Fazriansyah 2021</strong>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

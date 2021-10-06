@@ -26,12 +26,11 @@ class DecryptController extends Controller
 
         $attr['decrypted'] = $encrypter->decrypt(request('original'));
         Decrypt::create($attr);
-        session()->flash('success', 'teks dekripsi berhasil dibuat.');
-        return redirect()->route('decrypt.index');
+        return redirect()->route('decrypt.index')->with('decrypt', 'The message was decrypted');
     }
 
     public function destroy(Decrypt $decrypt) {
         $decrypt->delete();
-        return redirect()->route('decrypt.index');
+        return redirect()->route('decrypt.index')->with('decrypt', 'The message was deleted');
     }
 }
