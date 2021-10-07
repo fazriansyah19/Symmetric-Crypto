@@ -33,19 +33,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('encrypt.index') }}">Encrypt</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('decrypt.index') }}">Decrypt</a>
-                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/fazriansyah19/Symmetric-Crypto">Source</a>
+                            <a class="nav-link" href="{{ route('encrypt.index') }}">Encrypt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('decrypt.index') }}">Decrypt</a>
                         </li>
                         @guest
                             {{-- @if (Route::has('login'))
